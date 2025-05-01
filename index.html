@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      pointer-events: none;
+      font-family: 'Oxanium', sans-serif;
+    }
+
+    .block {
+      pointer-events: auto;
+    }
+
+    body {
+      background-color: black;
+      color: #e7e7e7;
+      overflow: hidden;
+    }
+
+    .font-special {
+      font-family: 'Audiowide', cursive;
+      color: aliceblue;
+    }
+
+    footer {
+      min-width: 100vw;
+    }
+
+    nav {
+      min-width: 100vw;
+      pointer-events: auto;
+    }
+
+    .navbar-brand img {
+      width: 50px;
+    }
+
+    .fa-ellipsis-vertical {
+      pointer-events: auto;
+    }
+
+    .gradient-top,
+    .gradient-bottom {
+      position: fixed;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .gradient-top {
+      top: 0;
+      right: 0;
+    }
+
+    .gradient-bottom {
+      bottom: 0;
+      left: 0;
+    }
+
+    .blur-layer {
+      position: absolute;
+      height: 0;
+      width: 30rem;
+      box-shadow: 0 0 700px 15px white;
+      rotate: -30deg;
+      z-index: -1;
+    }
+
+    .layer-black {
+      min-width: 100vw;
+      min-height: 50vh;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+      position: absolute;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    ::selection {
+      background-color: #f39c12; 
+      color: rgb(0, 0, 0);              
+    }
+
+    .blur-top {
+      top: 20%;
+      right: 0;
+    }
+
+    .blur-bottom {
+      bottom: 20%;
+      left: 0;
+    }
+
+    .text-shadow-w {
+      text-shadow: 0 0 20px black;
+    }
+
+    .text-shadow-p {
+      text-shadow: 0 0 50px rgba(255, 255, 255, 0.911);
+    }
+
+    a {
+      pointer-events: auto;
+    }
+
+    .dModel {
+      min-height: 100vh;
+      transform: scale(120%);
+      position: fixed;
+      top: 40px;
+      pointer-events: auto;
+    }
+
+    .hero-text {
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 768px) {
+      h1.fs-2 {
+        font-size: 1.5rem;
+      }
+
+      .hero-text p, footer {
+        font-size: 0.9rem;
+      }
+
+      footer {
+        font-size: 0.7rem;
+      }
+
+      .navbar-brand img {
+        width: 40px;
+      }
+
+      .fa-ellipsis-vertical {
+        font-size: 1.5rem;
+      }
+
+      .d-flex.gap-5 {
+        gap: 1.5rem !important;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+
+      .layer-black {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.4) ,rgb(0, 0, 0));
+      }
+    }
+  </style>
+</head>
+<body class="position-relative min-vh-100">
+  <header>
+    <!-- Spline 3D -->
+    <script type="module" class="dModel" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+    <spline-viewer class="dModel" url="https://prod.spline.design/topXOlQzzcoMSCHQ/scene.splinecode"></spline-viewer>
+
+    <!-- Gradien dan Blur -->
+    <img src="assets/gradient.png" class="gradient-top" alt="gradient"/>
+    <div class="blur-layer blur-top position-fixed"></div>
+    <img src="assets/gradient.png" class="gradient-bottom" alt="gradient"/>
+    <div class="blur-layer blur-bottom position-fixed"></div>
+    <div class="layer-black position-fixed"></div>
+
+    <!-- Nav Bar -->
+    <nav class="justify-content-between position-fixed d-flex align-items-center my-md-4 my-3 px-md-5 px-sm">
+      <a href="#" class="navbar-brand d-flex align-items-center ms-5">
+        <img src="assets/LogoM.png" alt="Logo">
+      </a>
+      <i class="fas fa-ellipsis-vertical fa-2x text-light me-5"></i>
+    </nav>
+
+    <!-- Hero Main -->
+    <main class="position-absolute top-50 start-50 translate-middle text-center container hero-text">
+      <h1 class="fs-2 text-shadow-w">
+        <span class="font-special text-shadow-p block">Hi, I'm</span> Hadziq Avi Asafa <br/>
+        <span class="font-special text-shadow-p block">But You Can Call Me</span> Hadziq
+      </h1>
+      <p class="mt-3 text-shadow-w block">
+        I build modern, responsive websites and craft digital experiences that
+        blend functionality with design. <br/>
+        Let’s explore my work and story.
+      </p>
+      <div class="d-flex flex-ms-column flex-row justify-content-center gap-6 mt-4 flex-wrap fs-5 text-shadow-w">
+        <a href="#projects" class="text-decoration-none text-light mx-4"><i class="fas fa-arrow-right me-2"></i>My&nbsp;Projects</a>
+        <a href="#about" class="text-decoration-none text-light mx-4"><i class="fas fa-arrow-right me-2"></i>About&nbsp;Me</a>
+      </div>
+    </main>
+  </header>
+
+  <footer class="text-light text-center py-3 mt-5 position-absolute bottom-0 text-opacity-50">
+    <p class="mb-0 text-center text-shadow-w block">&copy; 2025 Hadziq Avi Asafa. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
