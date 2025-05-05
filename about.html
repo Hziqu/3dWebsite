@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web 3D</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet"/>
+
+    <!-- Kustomisasi Tailwind -->
+</head>
+<body>
+    <header class="relative min-h-screen bg-black text-white overflow-hidden font-['Oxanium']">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center sm:px-20 px-5 sm:py-10 py-5 fixed w-full z-10 pointer-events-none">
+          <img src="assets/LogoM.png" alt="Logo" class="w-16">
+          <i class="fas fa-ellipsis-vertical text-white text-2xl"></i>
+        </nav>
+
+        <!-- Blur & Gradient Background -->
+        <img src="assets/gradient.png" class="fixed top-0 right-0 opacity-50 pointer-events-none"/>
+        <div class="fixed top-[20%] right-0 w-[30rem] h-0 shadow-[0_0_700px_15px_white] rotate-[-30deg] pointer-events-none"></div>
+
+        <img src="assets/gradient.png" class="fixed bottom-0 left-0 opacity-50 pointer-events-none"/>
+        <div class="fixed bottom-[20%] left-0 w-[30rem] h-0 shadow-[0_0_700px_15px_white] rotate-[-30deg] pointer-events-none"></div>
+
+        <main>
+            <img src="assets/Hadziq.jpg" width="250" class="absolute top-0 right-0 rounded-bl-full" alt="foto">
+            <br>
+            <br>
+            <br>
+            <br>
+            <section class="px-6 py-12">
+                <div class="max-w-4xl mx-auto">
+                  <h2 class="text-5xl font-bold mb-6 border-b-2 border-gray-300 pb-2">About Me</h2>
+                  
+                  <!-- Deskripsi Diri -->
+
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-2">Deskripsi Diri</h3>
+                    <p class="text-gray-400">
+                        Hi, I'm Hadziq Avi Asafa, a dedicated vocational high school student with a strong passion for IT.
+                        I have a deep interest in learning new things and continuously expanding my knowledge in the tech world. My goal is to pursue higher education in a top-level IT program.
+                    </p>
+                  </div>
+              
+                  <!-- Sertifikat -->
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-2">Sertifikat</h3>
+                    <p class="text-gray-400">I have participated in competitions and earned certificates that reflect my dedication and skills.</p>
+                    <img src="assets/Hadziq Avi Asyafa.png" alt="sertivikat">
+                  </div>
+
+                  <!-- Skill -->
+                  <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-2">Skill</h3>
+                    <p class="text-gray-400">I’m proficient in HTML, CSS, JavaScript, Python, and Haskell.</p>
+
+                  <section class="max-w-2xl mx-auto p-6">
+                    <h2 class="text-3xl font-bold mb-6 text-center">My Skills</h2>
+                    
+                    <!-- Skill Item -->
+                    <div class="space-y-6">
+                      <!-- HTML -->
+                      <div>
+                        <div class="flex justify-between mb-1">
+                          <span class="text-gray-300 font-semibold">HTML</span>
+                          <span class="text-gray-400">95%</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                          <div class="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full" style="width: 95%;"></div>
+                        </div>
+                      </div>
+                  
+                      <!-- CSS -->
+                      <div>
+                        <div class="flex justify-between mb-1">
+                          <span class="text-gray-300 font-semibold">CSS</span>
+                          <span class="text-gray-400">90%</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                          <div class="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full" style="width: 90%;"></div>
+                        </div>
+                      </div>
+                  
+                      <!-- JavaScript -->
+                      <div>
+                        <div class="flex justify-between mb-1">
+                          <span class="text-gray-300 font-semibold">JavaScript</span>
+                          <span class="text-gray-400">80%</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                          <div class="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full" style="width: 80%;"></div>
+                        </div>
+                      </div>
+                  
+                      <!-- Python -->
+                      <div>
+                        <div class="flex justify-between mb-1">
+                          <span class="text-gray-300 font-semibold">Python</span>
+                          <span class="text-gray-400">75%</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                          <div class="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full" style="width: 75%;"></div>
+                        </div>
+                      </div>
+                  
+                      <!-- Haskell -->
+                      <div>
+                        <div class="flex justify-between mb-1">
+                          <span class="text-gray-300 font-semibold">Haskell</span>
+                          <span class="text-gray-400">95%</span>
+                        </div>
+                        <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                          <div class="bg-gradient-to-r from-gray-400 to-gray-600 h-full rounded-full" style="width: 95%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  
+              
+                </div>
+              </section>              
+        </main>
+
+        <!-- Footer -->
+        <footer class="absolute bottom-4 w-full text-center text-sm text-gray-500 text-shadow-sm z-20">
+          © 2025 Hadziq Avi Asafa. All rights reserved.
+        </footer>
+      </header>
+      
+</body>
+</html>
