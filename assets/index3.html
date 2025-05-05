@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web 3D</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet"/>
+
+    <!-- Kustomisasi Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          textShadow: {
+            sm: '1px 1px 2px rgba(0, 0, 0, 0.25)',
+            DEFAULT: '2px 2px 4px rgba(0, 0, 0, 0.4)',
+            lg: '0px 0px 50px rgba(255, 255, 255, 0.911)',
+          }
+        }
+      },
+      plugins: [
+        function({ addUtilities }) {
+          addUtilities({
+            '.text-shadow-sm': {
+              'text-shadow': '1px 1px 2px rgba(0, 0, 0, 0.25)',
+            },
+            '.text-shadow': {
+              'text-shadow': '2px 2px 4px rgba(0, 0, 0, 0.4)',
+            },
+            '.text-shadow-lg': {
+              'text-shadow': '0px 0px 50px rgba(255, 255, 255, 0.911)',
+            },
+            '::selection': {
+            'background-color': '#f39c12',
+            'color': 'black',
+            },
+          })
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+    <header class="relative min-h-screen bg-black text-white overflow-hidden font-['Oxanium']">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center sm:px-20 px-5 sm:py-10 py-5 fixed w-full z-10 pointer-events-none">
+          <img src="assets/LogoM.png" alt="Logo" class="w-16">
+          <i class="fas fa-ellipsis-vertical text-white text-2xl"></i>
+        </nav>
+      
+        <!-- Spline 3D -->
+        <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.89/build/spline-viewer.js"></script>
+        <spline-viewer class="absolute top-[5%] transform scale-125" url="https://prod.spline.design/topXOlQzzcoMSCHQ/scene.splinecode"></spline-viewer> -->
+      
+        <!-- Blur & Gradient Background -->
+        <img src="assets/gradient.png" class="absolute top-0 right-0 opacity-50 pointer-events-none"/>
+        <div class="absolute top-[20%] right-0 w-[30rem] h-0 shadow-[0_0_700px_15px_white] rotate-[-30deg] pointer-events-none"></div>
+
+        <img src="assets/gradient.png" class="absolute bottom-0 left-0 opacity-50 pointer-events-none"/>
+        <div class="absolute bottom-[20%] left-0 w-[30rem] h-0 shadow-[0_0_700px_15px_white] rotate-[-30deg] pointer-events-none"></div>
+
+        <div class="fixed w-screen sm:min-h-[50vh] min-h-[100vh] bg-gradient-to-b sm:from-transparent from-black/10 to-black sm:to-black bottom-0 z-10 pointer-events-none"></div>
+      
+        <!-- Hero Section -->
+        <main class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-full px-5 z-10 pointer-events-none">
+          <h1 class="text-2xl md:text-4xl font-semibold leading-tight pointer-events-auto">
+            <span class="font-['Audiowide'] text-shadow-lg">Hi, I'm</span> Hadziq Avi Asafa <br />
+            <span class="font-['Audiowide'] text-shadow-lg">But You Can Call Me</span> Hadziq
+          </h1>
+          <p class="mt-4 text-sm md:text-base text-gray-300 text-shadow-sm pointer-events-auto">
+            I build modern, responsive websites and craft digital experiences that blend functionality with design. <br />
+            Let’s explore my work and story.
+          </p>
+          <div class="flex flex-wrap justify-center gap-10 mt-6 text-lg pointer-events-auto">
+            <a href="#projects" class="text-white hover:underline flex items-center gap-2"><i class="fas fa-arrow-right"></i>My Projects</a>
+            <a href="#about" class="text-white hover:underline flex items-center gap-2"><i class="fas fa-arrow-right"></i>About Me</a>
+          </div>
+        </main>
+      
+        <!-- Footer -->
+        <footer class="absolute bottom-4 w-full text-center text-sm text-gray-500 text-shadow-sm z-20">
+          © 2025 Hadziq Avi Asafa. All rights reserved.
+        </footer>
+      </header>
+      
+</body>
+</html>
